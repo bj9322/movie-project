@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">영화 리스트
+        <input id="search-box" type="text" placeholder="영화를 검색하세요">
+    </div>
+
+    <div id="movie-list"></div>
+
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <img id="modal-poster" src="" alt="Poster" class="modal-poster">
+            <h2 id="modal-title"></h2>
+            <p id="modal-overview"></p>
+            <p><strong>개봉일:</strong> <span id="modal-release"></span></p>
+            <p><strong>평점:</strong> <span id="modal-rating"></span></p>
+            <button id = "close-modal" class="close">닫기</button>
+        </div>
+    </div>
+
+    <script src="api.js" type="module"></script>
+    <script src="dom.js" type="module"></script>
+</body>
+
+</html>

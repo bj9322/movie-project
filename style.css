@@ -1,0 +1,121 @@
+#header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 영화 항목 전체를 묶는 div 스타일 */
+.movie-item {
+    width: calc(20% - 20px); /* 각 항목의 너비 */
+    box-sizing: border-box;
+    border: 2px solid #333; /* 전체 항목에 테두리 */
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    transition: transform 0.2s; /* 마우스 오버시 애니메이션 추가 */
+}
+
+.movie-item:hover {
+    transform: scale(1.05); /* 마우스 오버시 확대 효과 */
+}
+
+/* movie-info 안의 포스터, 제목, 평점 정렬 */
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가로축 중앙 정렬 */
+}
+
+.movie-poster {
+    width: 100%;
+    max-width: 150px; /* 포스터의 최대 너비 */
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.movie-title {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.movie-average {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #666;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#search-box {
+    width: 300px; /* 텍스트박스의 너비 설정 */
+    padding: 5px;
+    margin-top: 20px; /* 약간의 간격 추가 */
+}
+
+
+/* 모달창 기본 스타일 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10; /* 화면 위로 올리기 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 배경 어둡게 처리 */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* 내용이 길어질 경우 스크롤 가능 */
+}
+
+/* 모달창 내용 스타일 */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80%; /* 화면 밖으로 나가지 않게 크기 제한 */
+    overflow-y: auto; /* 모달 내용이 길어질 경우 스크롤 가능 */
+    position: relative; 
+}
+
+/* 닫기 버튼 스타일 */
+.close {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px; /* 영화 내용과 버튼 사이에 여백 추가 */
+}
+
+.modal-poster {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 기본 영화 목록 스타일 */
+.movie-poster {
+    width: 150px;
+    cursor: pointer;
+}
